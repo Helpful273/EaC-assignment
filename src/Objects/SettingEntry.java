@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class SettingEntry {
     private HashMap<String, Option> options = new HashMap<>();
-    private String selectedOption;
+    private Option selectedOption;
     private String name;
     
     /*
@@ -18,27 +18,30 @@ public class SettingEntry {
     */
     public SettingEntry(String name, Option... options) {
         this.name = name;
+        this.selectedOption = options[0];
         
         for (Option option: options) {
-            if (this.selectedOption == null)
-                this.selectedOption = option.GetOptionName();
-            
             this.options.put(option.GetOptionName(), option);
         }
     }
     
-    /*
-    Constructor for a SettingEntry object.
-    @param name The setting's name.
-    @param defaultOption The default option.
-    @param options The varargs for default options
-    */
-    public SettingEntry(String name, String defaultOption, Option... options) {
-        this(name, options);
-        this.selectedOption = defaultOption;
-    }
-    
     public void AddOption(Option option) {
         this.options.put(option.GetOptionName(), option);
+    }
+    
+    public void SelectOption(String optionKey) {
+        if (this.options.containsKey(optionKey)) {
+            this.selectedOption = this.options.get(optionKey);
+        } else {
+            System.out.println(String.format("Key: \"%s\" does not exist within options. Option remains the same.", optionKey));
+        }
+    }
+    
+    public Option GetSelectedOption() {
+        return this.selectedOption;
+    }
+    
+    public String GetName() {
+        return this.name;
     }
 }

@@ -7,9 +7,9 @@ import java.util.HashMap;
  * @author helpful
  */
 public class Option {
-    private HashMap<String, OptionEntry> entries = new HashMap<>();
+    private final HashMap<String, OptionEntry> entries = new HashMap<>();
+    private final String name;
     private OptionEntry selectedEntry;
-    private String name;
     
     /*
     Constructor for a SettingEntry object.

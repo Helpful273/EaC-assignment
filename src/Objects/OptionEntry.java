@@ -5,9 +5,9 @@ package Objects;
  * @author Helpful
  */
 public class OptionEntry {
-    private String name;
-    private double uxFactor, privacyFactor;
-    private String uxOperation, privacyOperation;
+    private final String name;
+    private final double uxFactor, privacyFactor;
+    private final String uxOperation, privacyOperation;
     
     /*
     Constructor for ScoreImpact object.
@@ -25,20 +25,53 @@ public class OptionEntry {
     }
     
     /*
-    Calculates a new user experience score given
-    @param score
+    Calculates the new user experience score.
+    @param score The previous score.
     @return double The new score.
     */
-    public double CalculateUXScore() {
-        double finalUXScore = 0;
-        return finalUXScore;
+    public double CalculateUXScore(double score) {
+        double factor = this.uxFactor;
+        
+        switch (this.uxOperation) {
+            case "Multiplication":
+                return score * factor;
+            case "Divison":
+                return score / factor;
+            case "Addition":
+                return score + factor;
+            case "Subtraction":
+                return score - factor;
+        }
+        
+        return score;
     }
     
-    public double CalculatePrivacyScore() {
-        double finalPrivacyScore = 0;
-        return finalPrivacyScore;
+    /*
+    Calculates the new privacy score given.
+    @param score The previous score.
+    @return double The new score.
+    */
+    public double CalculatePrivacyScore(double score) {
+        double factor = this.privacyFactor;
+        
+        switch (this.privacyOperation) {
+            case "Multiplication":
+                return score * factor;
+            case "Divison":
+                return score / factor;
+            case "Addition":
+                return score + factor;
+            case "Subtraction":
+                return score - factor;
+        }
+        
+        return score;
     }
     
+    /*
+    Fetch our OptionEntry object name
+    @return String The name of our entry.
+    */
     public String GetName() {
         return this.name;
     }

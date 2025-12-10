@@ -25,7 +25,9 @@ public class OptionEntry {
     }
     
     /*
-    Calculates a new user experience score given 
+    Calculates a new user experience score given
+    @param score
+    @return double The new score.
     */
     public double CalculateUXScore() {
         double finalUXScore = 0;

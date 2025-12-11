@@ -1,0 +1,15 @@
+
+public class placeholder extends maillinglist {
+
+    private String name;
+
+    public maillinglist(String name) {
+        super();
+        this.name = name;
+    }
+
+    public void showMail() {
+
+    }
+
+}

@@ -1,22 +1,21 @@
-package Assets.Templates;
-
-import java.awt.Color;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package Assets.Apps;
+
+import java.awt.Color;
 
 /**
  *
  * @author 344179247
  */
-public class AppTemplate extends javax.swing.JFrame {
+public class App1 extends javax.swing.JFrame {
 
     /**
-     * Creates new form defaultSetting
+     * Creates new form App1
      */
-    public AppTemplate() {
+    public App1() {
         initComponents();
     }
 
@@ -47,10 +46,24 @@ public class AppTemplate extends javax.swing.JFrame {
         notificationSetting2 = new javax.swing.JToggleButton();
         notificationSetting3 = new javax.swing.JToggleButton();
         jComboBox2 = new javax.swing.JComboBox<>();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(270, 550));
-        setResizable(false);
+        jLabel8 = new javax.swing.JLabel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        privacySetting4 = new javax.swing.JToggleButton();
+        privacySetting5 = new javax.swing.JToggleButton();
+        privacySetting6 = new javax.swing.JToggleButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        notificationSetting4 = new javax.swing.JToggleButton();
+        notificationSetting5 = new javax.swing.JToggleButton();
+        notificationSetting6 = new javax.swing.JToggleButton();
+        jComboBox4 = new javax.swing.JComboBox<>();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jLabel1.setText("APP NAME ");
@@ -203,23 +216,178 @@ public class AppTemplate extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Notificaion", jPanel2);
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(270, 550));
+        setResizable(false);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("YZ ");
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        privacySetting4.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting4.setSelected(true);
+        privacySetting4.setText("On");
+        privacySetting4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                privacySetting4ActionPerformed(evt);
+            }
+        });
+
+        privacySetting5.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting5.setSelected(true);
+        privacySetting5.setText("On");
+        privacySetting5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                privacySetting5ActionPerformed(evt);
+            }
+        });
+
+        privacySetting6.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting6.setSelected(true);
+        privacySetting6.setText("On");
+
+        jLabel9.setText("Location");
+
+        jLabel10.setText("Pictures");
+
+        jLabel11.setText("Camera");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                        .addComponent(privacySetting4))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(privacySetting5, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(privacySetting6, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(privacySetting4)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(privacySetting5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(privacySetting6)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(110, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Privacy", jPanel3);
+
+        jLabel12.setText("Setting 1");
+
+        jLabel13.setText("Setting 2");
+
+        jLabel14.setText("Setting 3");
+
+        notificationSetting4.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting4.setSelected(true);
+        notificationSetting4.setText("On");
+        notificationSetting4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notificationSetting4ActionPerformed(evt);
+            }
+        });
+
+        notificationSetting5.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting5.setSelected(true);
+        notificationSetting5.setText("On");
+        notificationSetting5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notificationSetting5ActionPerformed(evt);
+            }
+        });
+
+        notificationSetting6.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting6.setSelected(true);
+        notificationSetting6.setText("On");
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                        .addComponent(notificationSetting6))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(notificationSetting5))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(notificationSetting4)))
+                .addContainerGap())
+            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(notificationSetting4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(notificationSetting5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(notificationSetting6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(110, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Notificaion", jPanel4);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane2)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jTabbedPane1)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         pack();
@@ -232,19 +400,40 @@ public class AppTemplate extends javax.swing.JFrame {
         
     }//GEN-LAST:event_privacySetting1ActionPerformed
 
+    private void privacySetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting2ActionPerformed
+        privacySetting2.setBackground(Color.red);
+        privacySetting2.setText("Off");
+    }//GEN-LAST:event_privacySetting2ActionPerformed
+
     private void notificationSetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_notificationSetting1ActionPerformed
-
-    private void privacySetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting2ActionPerformed
-        privacySetting2.setBackground(Color.red);
-        privacySetting2.setText("Off");        
-    }//GEN-LAST:event_privacySetting2ActionPerformed
 
     private void notificationSetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting2ActionPerformed
         // TODO add your handling code here:
         notificationSetting1.setBackground(Color.red);
     }//GEN-LAST:event_notificationSetting2ActionPerformed
+
+    private void privacySetting4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting4ActionPerformed
+        // TODO add your handling code here:
+        privacySetting1.setBackground(Color.red);
+        privacySetting1.setText("Off");
+
+    }//GEN-LAST:event_privacySetting4ActionPerformed
+
+    private void privacySetting5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting5ActionPerformed
+        privacySetting2.setBackground(Color.red);
+        privacySetting2.setText("Off");
+    }//GEN-LAST:event_privacySetting5ActionPerformed
+
+    private void notificationSetting4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_notificationSetting4ActionPerformed
+
+    private void notificationSetting5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting5ActionPerformed
+        // TODO add your handling code here:
+        notificationSetting1.setBackground(Color.red);
+    }//GEN-LAST:event_notificationSetting5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,21 +452,20 @@ public class AppTemplate extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AppTemplate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AppTemplate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AppTemplate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AppTemplate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AppTemplate().setVisible(true);
+                new App1().setVisible(true);
             }
         });
     }
@@ -285,21 +473,39 @@ public class AppTemplate extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JToggleButton notificationSetting1;
     private javax.swing.JToggleButton notificationSetting2;
     private javax.swing.JToggleButton notificationSetting3;
+    private javax.swing.JToggleButton notificationSetting4;
+    private javax.swing.JToggleButton notificationSetting5;
+    private javax.swing.JToggleButton notificationSetting6;
     private javax.swing.JToggleButton privacySetting1;
     private javax.swing.JToggleButton privacySetting2;
     private javax.swing.JToggleButton privacySetting3;
+    private javax.swing.JToggleButton privacySetting4;
+    private javax.swing.JToggleButton privacySetting5;
+    private javax.swing.JToggleButton privacySetting6;
     // End of variables declaration//GEN-END:variables
 }

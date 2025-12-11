@@ -28,15 +28,19 @@ public class App {
         return this.options.get(key);
     }
     public double GetTotalPrivacyScore(){
+        double score = 0.0;
         for (Option option: options.values()){
-            option.GetSelectedEntry();
+            score += option.GetSelectedEntry().CalculatePrivacyScore(1);
         }
+        return score;
     }
-    public Option GetTotalUXScore(){
+    public double GetTotalUXScore(){
+        double score  = 0.0;
         for (Option option: this.options.values()){
-            return option;
+            score += option.GetSelectedEntry().CalculateUXScore(1);
+            
         }
-        return null;
+        return score;
     }
         
     

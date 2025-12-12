@@ -225,8 +225,8 @@ public class App2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        Option [] option1 = new Option [1];
-        public App app2 = new App("ashdsauhdjas", option1);
+        private static final Option [] option1 = new Option [1];
+        public static App app2 = new App("ashdsauhdjas", option1);
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
         // TODO add your handling code here:
         privacySetting1.setBackground(Color.red);

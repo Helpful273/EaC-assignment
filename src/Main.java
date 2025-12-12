@@ -7,6 +7,9 @@ public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        App app1 = App1.app1;
+        App app2 = App2.app2;
+        App app3 = App3.app3;
         jComboBox1.addItem(app1);
         jComboBox1.addItem(app2);
         jComboBox1.addItem(app3);
@@ -149,11 +152,11 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         App selectedApp = jComboBox1.getSelectedItem();
-        if (selectedApp.equals(app1)) {
+        if (selectedApp app1) {
             new app1.setVisible(true);
-        } else if (selectedApp.equals(app2)) {
+        } else if (selectedApp app2) {
             new app2.setVisible(true);
-        } else if (selectedApp.equals(app3)) {
+        } else if (selectedApp app3) {
             new app3.setVisible(true);
         }
 

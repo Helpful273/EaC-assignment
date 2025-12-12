@@ -400,9 +400,10 @@ public class App1 extends javax.swing.JFrame {
     OptionEntry locationOn = new OptionEntry("location", 2.0 , 2.0 , "Addition", "Addition");
     OptionEntry settingOff = new OptionEntry("Off", 0.0, 0.0, "Addition", "Addition"); 
     OptionEntry picturesOn = new OptionEntry("pictures", 2.0, 2.0, "Addiiton", "Addition");
-    OptionEntry picturesOff = new OptionEntry("Camera", 2.0, 2.0, "Addition", "Addition");
-    OptionEntry 
-    OptionEntry [] privacySettings = new OptionEntry [5];
+    OptionEntry CameraOn = new OptionEntry("Camera", 2.0, 2.0, "Addition", "Addition");
+    OptionEntry BannersOn = new OptionEntry("Banners", 2.0, 2.0, "Addition", "Addiiton");
+    OptionEntry mailingListOn = new OptionEntry("MailingList", 2.0, 2.0, "Addition", "Addiiton" );
+    OptionEntry [] app1Settings = new OptionEntry [5];
     
     
     

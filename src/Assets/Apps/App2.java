@@ -8,14 +8,14 @@ import java.awt.Color;
 import Objects.*;
 /**
  *
- * @author Terrence
+ * @author terre
  */
-public class App1 extends javax.swing.JFrame {
+public class App2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form App1
+     * Creates new form App2
      */
-    public App1() {
+    public App2() {
         initComponents();
     }
 
@@ -28,24 +28,6 @@ public class App1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        privacySetting1 = new javax.swing.JToggleButton();
-        privacySetting2 = new javax.swing.JToggleButton();
-        privacySetting3 = new javax.swing.JToggleButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        notificationSetting1 = new javax.swing.JToggleButton();
-        notificationSetting2 = new javax.swing.JToggleButton();
-        notificationSetting3 = new javax.swing.JToggleButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
@@ -65,164 +47,11 @@ public class App1 extends javax.swing.JFrame {
         notificationSetting6 = new javax.swing.JToggleButton();
         jComboBox4 = new javax.swing.JComboBox<>();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
-        jLabel1.setText("APP NAME ");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        privacySetting1.setBackground(new java.awt.Color(153, 255, 153));
-        privacySetting1.setSelected(true);
-        privacySetting1.setText("On");
-        privacySetting1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                privacySetting1ActionPerformed(evt);
-            }
-        });
-
-        privacySetting2.setBackground(new java.awt.Color(153, 255, 153));
-        privacySetting2.setSelected(true);
-        privacySetting2.setText("On");
-        privacySetting2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                privacySetting2ActionPerformed(evt);
-            }
-        });
-
-        privacySetting3.setBackground(new java.awt.Color(153, 255, 153));
-        privacySetting3.setSelected(true);
-        privacySetting3.setText("On");
-
-        jLabel2.setText("Setting 1");
-
-        jLabel3.setText("Setting 2");
-
-        jLabel4.setText("Setting 3");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                        .addComponent(privacySetting1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(privacySetting2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(privacySetting3, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(privacySetting1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(privacySetting2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(privacySetting3)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Privacy", jPanel1);
-
-        jLabel5.setText("Setting 1");
-
-        jLabel6.setText("Setting 2");
-
-        jLabel7.setText("Setting 3");
-
-        notificationSetting1.setBackground(new java.awt.Color(153, 255, 153));
-        notificationSetting1.setSelected(true);
-        notificationSetting1.setText("On");
-        notificationSetting1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                notificationSetting1ActionPerformed(evt);
-            }
-        });
-
-        notificationSetting2.setBackground(new java.awt.Color(153, 255, 153));
-        notificationSetting2.setSelected(true);
-        notificationSetting2.setText("On");
-        notificationSetting2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                notificationSetting2ActionPerformed(evt);
-            }
-        });
-
-        notificationSetting3.setBackground(new java.awt.Color(153, 255, 153));
-        notificationSetting3.setSelected(true);
-        notificationSetting3.setText("On");
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                        .addComponent(notificationSetting3))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(notificationSetting2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(notificationSetting1)))
-                .addContainerGap())
-            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(notificationSetting1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(notificationSetting2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(notificationSetting3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Notificaion", jPanel2);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(270, 550));
-        setResizable(false);
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("YZ ");
+        jLabel8.setText("DelayedLitre");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -264,7 +93,7 @@ public class App1 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
                         .addComponent(privacySetting4))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,41 +221,20 @@ public class App1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    //currently empty
-    Option [] options1 = new Option[1];
-    App app1 = new App("YZ", options1);
+
+    Option [] options2 = new Option[1];
+    App app2 = new App("DelayedLitre", options2);
     
-    private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
-        // TODO add your handling code here:
-        privacySetting1.setBackground(Color.red);
-        privacySetting1.setText("Off");
-        
-    }//GEN-LAST:event_privacySetting1ActionPerformed
-
-    private void privacySetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting2ActionPerformed
-        privacySetting2.setBackground(Color.red);
-        privacySetting2.setText("Off");
-    }//GEN-LAST:event_privacySetting2ActionPerformed
-
-    private void notificationSetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_notificationSetting1ActionPerformed
-
-    private void notificationSetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting2ActionPerformed
-        // TODO add your handling code here:
-        notificationSetting1.setBackground(Color.red);
-    }//GEN-LAST:event_notificationSetting2ActionPerformed
-
+    
     private void privacySetting4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting4ActionPerformed
         // TODO add your handling code here:
-        privacySetting1.setBackground(Color.red);
-        privacySetting1.setText("Off");
-
+        privacySetting4.setBackground(Color.red);
+        privacySetting4.setText("Off");
     }//GEN-LAST:event_privacySetting4ActionPerformed
 
     private void privacySetting5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting5ActionPerformed
-        privacySetting2.setBackground(Color.red);
-        privacySetting2.setText("Off");
+        privacySetting5.setBackground(Color.red);
+        privacySetting5.setText("Off");
     }//GEN-LAST:event_privacySetting5ActionPerformed
 
     private void notificationSetting4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting4ActionPerformed
@@ -435,7 +243,7 @@ public class App1 extends javax.swing.JFrame {
 
     private void notificationSetting5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting5ActionPerformed
         // TODO add your handling code here:
-        notificationSetting1.setBackground(Color.red);
+        notificationSetting5.setBackground(Color.red);
     }//GEN-LAST:event_notificationSetting5ActionPerformed
 
     /**
@@ -455,58 +263,40 @@ public class App1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(App1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new App1().setVisible(true);
+                new App2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JToggleButton notificationSetting1;
-    private javax.swing.JToggleButton notificationSetting2;
-    private javax.swing.JToggleButton notificationSetting3;
     private javax.swing.JToggleButton notificationSetting4;
     private javax.swing.JToggleButton notificationSetting5;
     private javax.swing.JToggleButton notificationSetting6;
-    private javax.swing.JToggleButton privacySetting1;
-    private javax.swing.JToggleButton privacySetting2;
-    private javax.swing.JToggleButton privacySetting3;
     private javax.swing.JToggleButton privacySetting4;
     private javax.swing.JToggleButton privacySetting5;
     private javax.swing.JToggleButton privacySetting6;

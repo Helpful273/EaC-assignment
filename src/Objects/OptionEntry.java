@@ -11,6 +11,7 @@ public class OptionEntry {
     
     /*
     Constructor for ScoreImpact object.
+    @param name An option entry
     @param uxFactor The factor in which it affects the calculation of user experience score.
     @param privacyFactor The factor in which it affects the calculation of privacy score.
     @param uxOperation The operation to calculate the user experience score with.

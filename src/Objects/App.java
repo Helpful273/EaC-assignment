@@ -5,6 +5,7 @@
 package Objects;
 import java.util.HashMap;
 import java.util.ArrayList;
+import Utils.*;
 
 /**
  *
@@ -36,8 +37,14 @@ public class App {
             optionEntries[counter] = option.GetSelectedEntry();
             counter ++;
         }
+        Sort.SortEntry(optionEntries);
+        for (int i =  0 ; i < optionEntries.length; i++){
+            score = optionEntries[i].CalculatePrivacyScore(score);
+        }
         return score;
     }
+    
+    
     public double GetTotalUXScore(){
         OptionEntry [] optionEntries = new OptionEntry[this.options.size()];
         double score  = 0.0;
@@ -47,8 +54,11 @@ public class App {
             counter ++;
             
         }
+        Sort.SortEntry(optionEntries);
+        for (int i =  0 ; i < optionEntries.length; i++){
+            score = optionEntries[i].CalculateUXScore(score);
+        }
         return score;
     }
-        
     
 }

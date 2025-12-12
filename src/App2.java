@@ -1,4 +1,4 @@
-package Assets.Apps;
+
 
 import Assets.Templates.*;
 import java.awt.Color;

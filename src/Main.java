@@ -30,7 +30,7 @@ public class Main extends javax.swing.JFrame {
         
         for (HashMap<String, Object> appHash: apps) {
             App app = (App) appHash.get("AppData");
-            AppsList.add(app);
+            AppsList.addItem(app);
         }
     }
     

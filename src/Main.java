@@ -2,6 +2,7 @@
  *
  * @author helpful
  */
+import Objects.*;
 public class Main extends javax.swing.JFrame {
 
     public Main() {
@@ -147,10 +148,17 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        App selectedApp = jComboBox1.getSelectedItem();
+        if (selectedApp.equals(app1)) {
+            new app1.setVisible(true);
+        } else if (selectedApp.equals(app2)) {
+            new app2.setVisible(true);
+        } else if (selectedApp.equals(app3)) {
+            new app3.setVisible(true);
+        }
 
-new .setVisible(true);
-this.setVisible(false);
-this.dispose();
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

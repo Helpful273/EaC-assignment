@@ -69,6 +69,25 @@ public class OptionEntry {
     }
     
     /*
+    Gets the number order of said operation.
+    @return int The order in which operations should be done.
+    */
+    public int GetOrderOfOperation() {
+        switch (this.privacyOperation) {
+            case "Multiplication":
+                return 2;
+            case "Divison":
+                return 2;
+            case "Addition":
+                return 1;
+            case "Subtraction":
+                return 1;
+        } 
+        
+        return 0;
+    }
+    
+    /*
     Fetch our OptionEntry object name
     @return String The name of our entry.
     */

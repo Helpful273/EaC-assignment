@@ -3,8 +3,12 @@
  * @author helpful
  */
 public class Main extends javax.swing.JFrame {
+
     public Main() {
         initComponents();
+        jComboBox1.addItem(app1);
+        jComboBox1.addItem(app2);
+        jComboBox1.addItem(app3);
     }
     
 
@@ -159,9 +163,7 @@ Label1.setText(app1.GetTotalPrivacyScore());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-jComboBox1.addItem(app1);
-jComboBox1.addItem(app2);
-jComboBox1.addItem(app3);
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     public static void main(String args[]) {

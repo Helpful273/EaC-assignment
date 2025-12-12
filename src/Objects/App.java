@@ -4,6 +4,7 @@
  */
 package Objects;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 /**
  *
@@ -28,16 +29,22 @@ public class App {
         return this.options.get(key);
     }
     public double GetTotalPrivacyScore(){
+        OptionEntry [] optionEntries = new OptionEntry[this.options.size()];
         double score = 0.0;
+        int counter = 0;
         for (Option option: options.values()){
-            score += option.GetSelectedEntry().CalculatePrivacyScore(1);
+            optionEntries[counter] = option.GetSelectedEntry();
+            counter ++;
         }
         return score;
     }
     public double GetTotalUXScore(){
+        OptionEntry [] optionEntries = new OptionEntry[this.options.size()];
         double score  = 0.0;
+        int counter = 0;
         for (Option option: this.options.values()){
-            score += option.GetSelectedEntry().CalculateUXScore(1);
+            optionEntries[counter] = option.GetSelectedEntry();
+            counter ++;
             
         }
         return score;

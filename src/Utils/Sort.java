@@ -7,7 +7,8 @@ import Objects.*;
  */
 public class Sort {
     /*
-    @param optionEntries
+    This sorts an array of OptionEntry objects
+    @param optionEntries The entry of options to sort for calculations.
     */
     public static void SortEntry(OptionEntry[] optionEntries) {
         int size = optionEntries.length;

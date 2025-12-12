@@ -2,9 +2,17 @@
  *
  * @author helpful
  */
+import Objects.*;
 public class Main extends javax.swing.JFrame {
+
     public Main() {
         initComponents();
+        App app1 = App1.app1;
+        App app2 = App2.app2;
+        App app3 = App3.app3;
+        jComboBox1.addItem(app1);
+        jComboBox1.addItem(app2);
+        jComboBox1.addItem(app3);
     }
     
 
@@ -143,10 +151,17 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        App selectedApp = jComboBox1.getSelectedItem();
+        if (selectedApp app1) {
+            new app1.setVisible(true);
+        } else if (selectedApp app2) {
+            new app2.setVisible(true);
+        } else if (selectedApp app3) {
+            new app3.setVisible(true);
+        }
 
-new .setVisible(true);
-this.setVisible(false);
-this.dispose();
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -159,9 +174,7 @@ Label1.setText(app1.GetTotalPrivacyScore());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-jComboBox1.addItem(app1);
-jComboBox1.addItem(app2);
-jComboBox1.addItem(app3);
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     public static void main(String args[]) {

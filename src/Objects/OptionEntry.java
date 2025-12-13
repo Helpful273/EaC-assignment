@@ -11,6 +11,7 @@ public class OptionEntry {
     
     /*
     Constructor for ScoreImpact object.
+    @param name An option entry
     @param uxFactor The factor in which it affects the calculation of user experience score.
     @param privacyFactor The factor in which it affects the calculation of privacy score.
     @param uxOperation The operation to calculate the user experience score with.
@@ -66,6 +67,25 @@ public class OptionEntry {
         }
         
         return score;
+    }
+    
+    /*
+    Gets the number order of said operation.
+    @return int The order in which operations should be done.
+    */
+    public int GetOrderOfOperation() {
+        switch (this.privacyOperation) {
+            case "Multiplication":
+                return 2;
+            case "Divison":
+                return 2;
+            case "Addition":
+                return 1;
+            case "Subtraction":
+                return 1;
+        } 
+        
+        return 0;
     }
     
     /*

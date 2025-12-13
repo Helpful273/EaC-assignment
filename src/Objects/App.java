@@ -4,6 +4,8 @@
  */
 package Objects;
 import java.util.HashMap;
+import java.util.ArrayList;
+import Utils.*;
 
 /**
  *
@@ -43,25 +45,38 @@ public class App {
     @return returns the sum of all of the Privacy scores in the hashmap
     */
     public double GetTotalPrivacyScore(){
+        OptionEntry [] optionEntries = new OptionEntry[this.options.size()];
         double score = 0.0;
+        int counter = 0;
         for (Option option: options.values()){
             //gets the option from the options hashmap. Then gets the option entry from the option that we have and runs Calc Privacy Score on that SettingEntry
-            score += option.GetSelectedEntry().CalculatePrivacyScore(1);
+            optionEntries[counter] = option.GetSelectedEntry();
+            counter ++;
+        }
+        Sort.SortEntry(optionEntries);
+        for (int i =  0 ; i < optionEntries.length; i++){
+            score = optionEntries[i].CalculatePrivacyScore(score);
         }
         return score;
     }
     /*
     gets the total UX score by looping through the array of options
     @return returns the sum of all of the UX scores in the hashmap
-    */
+    */ 
     public double GetTotalUXScore(){
+        OptionEntry [] optionEntries = new OptionEntry[this.options.size()];
         double score  = 0.0;
+        int counter = 0;
         for (Option option: this.options.values()){
-            score += option.GetSelectedEntry().CalculateUXScore(1);
+            optionEntries[counter] = option.GetSelectedEntry();
+            counter ++;
             
+        }
+        Sort.SortEntry(optionEntries);
+        for (int i =  0 ; i < optionEntries.length; i++){
+            score = optionEntries[i].CalculateUXScore(score);
         }
         return score;
     }
-        
     
 }

@@ -2,9 +2,36 @@
  *
  * @author helpful
  */
+import Objects.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Main extends javax.swing.JFrame {
+    ArrayList<HashMap<String, Object>> apps = new ArrayList<>();
+    
     public Main() {
         initComponents();
+        
+        HashMap<String, Object> app1Container = new HashMap<>();
+        app1Container.put("JFrame", new App1());
+        app1Container.put("AppData", App1.app);
+        
+        HashMap<String, Object> app2Container = new HashMap<>();
+        app1Container.put("JFrame", new App2());
+        app1Container.put("AppData", App2.app);
+        
+        HashMap<String, Object> app3Container = new HashMap<>();
+        app1Container.put("JFrame", new App3());
+        app1Container.put("AppData", App3.app);
+        
+        apps.add(app1Container);
+        apps.add(app2Container);
+        apps.add(app3Container);
+        
+        for (HashMap<String, Object> appHash: apps) {
+            App app = (App) appHash.get("AppData");
+            AppsList.addItem(app);
+        }
     }
     
 
@@ -13,8 +40,8 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        OpenApp = new javax.swing.JButton();
+        AppsList = new javax.swing.JComboBox<>();
         Label1 = new javax.swing.JLabel();
         Label2 = new javax.swing.JLabel();
         Label3 = new javax.swing.JLabel();
@@ -31,16 +58,16 @@ public class Main extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jButton1.setText("Go 2 App");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        OpenApp.setText("Go 2 App");
+        OpenApp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                OpenAppActionPerformed(evt);
             }
         });
 
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        AppsList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                AppsListActionPerformed(evt);
             }
         });
 
@@ -79,9 +106,9 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AppsList, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(OpenApp)
                 .addGap(90, 90, 90)
                 .addComponent(jButton2)
                 .addGap(41, 41, 41))
@@ -112,11 +139,11 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
+                            .addComponent(OpenApp)
                             .addComponent(jButton2)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(AppsList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -142,12 +169,13 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-new .setVisible(true);
-this.setVisible(false);
-this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void OpenAppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenAppActionPerformed
+        App selectedApp = (App) AppsList.getSelectedItem();
+        
+        for (javax.swing.JFrame app: apps) {
+            app.
+        }
+    }//GEN-LAST:event_OpenAppActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 Label1.setText(app1.GetTotalPrivacyScore());
@@ -158,11 +186,9 @@ Label1.setText(app1.GetTotalPrivacyScore());
     Label3.setText(app3.GetTotalUXScore());
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-jComboBox1.addItem(app1);
-jComboBox1.addItem(app2);
-jComboBox1.addItem(app3);
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void AppsListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppsListActionPerformed
+
+    }//GEN-LAST:event_AppsListActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -196,15 +222,15 @@ jComboBox1.addItem(app3);
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<App> AppsList;
     private javax.swing.JLabel Label1;
     private javax.swing.JLabel Label2;
     private javax.swing.JLabel Label3;
     private javax.swing.JLabel Label4;
     private javax.swing.JLabel Label5;
     private javax.swing.JLabel Label6;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton OpenApp;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<App> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

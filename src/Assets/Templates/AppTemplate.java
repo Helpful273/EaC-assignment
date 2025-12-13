@@ -1,5 +1,5 @@
 package Assets.Templates;
-
+import java.util.HashMap;
 import java.awt.Color;
 
 /*
@@ -9,7 +9,7 @@ import java.awt.Color;
 
 /**
  *
- * @author 344179247
+ * @author Terrence
  */
 public class AppTemplate extends javax.swing.JFrame {
 

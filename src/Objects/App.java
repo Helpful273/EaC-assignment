@@ -23,7 +23,7 @@ public class App {
     }
     
     public String GetAppName(){
-    return name;
+        return this.name;
     }
     
     public Option GetPrivacySetting(String key){

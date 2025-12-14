@@ -172,18 +172,28 @@ public class Main extends javax.swing.JFrame {
     private void OpenAppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenAppActionPerformed
         App selectedApp = (App) AppsList.getSelectedItem();
         
-        for (javax.swing.JFrame app: apps) {
-            app.
+        for (HashMap<String, Object> appHash: apps) {
+            App app = (App) appHash.get("AppData");
+            if (app.GetAppName().equals(selectedApp.GetAppName())) {
+                javax.swing.JFrame appFrame = (javax.swing.JFrame) appHash.get("JFrame");
+                appFrame.setVisible(true);
+            }
         }
     }//GEN-LAST:event_OpenAppActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-Label1.setText(app1.GetTotalPrivacyScore());
-    Label1.setText(app1.GetTotalUXScore());
-    Label2.setText(app2.GetTotalPrivacyScore());
-    Label2.setText(app2.GetTotalUXScore());
-    Label3.setText(app3.GetTotalPrivacyScore());
-    Label3.setText(app3.GetTotalUXScore());
+        /*
+        DEPRECATE.
+        
+        make it so when JComboBox selects a new target use App.java methods to update information instead of a manual button click
+        
+        Label1.setText(app1.GetTotalPrivacyScore());
+        Label1.setText(app1.GetTotalUXScore());
+        Label2.setText(app2.GetTotalPrivacyScore());
+        Label2.setText(app2.GetTotalUXScore());
+        Label3.setText(app3.GetTotalPrivacyScore());
+        Label3.setText(app3.GetTotalUXScore());
+        */
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void AppsListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppsListActionPerformed

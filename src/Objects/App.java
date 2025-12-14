@@ -78,5 +78,9 @@ public class App {
         }
         return score;
     }
+    @Override
+    public String toString(){
+        return name;
+    }
     
 }

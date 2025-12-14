@@ -14,12 +14,38 @@ import Objects.*;
  * @author 344179247
  */
 public class App2 extends javax.swing.JFrame {
-
+    private final static Option[] options = new Option[6];
     /**
      * Creates new form defaultSetting
      */
     public App2() {
         initComponents();
+         //Init location Options and Option Entries
+        OptionEntry locationOn = new OptionEntry("On", 2.0, 20, "Multiplication", "Addition");
+        OptionEntry locationOff = new OptionEntry ("Off", 0.0, 0.0, "Addition","Addition");
+        options[0] = new Option ("Location", locationOn, locationOff);
+        //init pictures
+        OptionEntry picturesOn = new OptionEntry("On", 2.0, 2.0, "Multiplication", "Multiplication");
+        OptionEntry picturesOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        options[1] = new Option("Pictures", picturesOn, picturesOff);
+        //init camera
+        OptionEntry cameraOn = new OptionEntry("On", 1.5,1.1, "Multiplication", "Multiplication" );
+        OptionEntry cameraOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        options[2] = new Option("Camera", cameraOn, cameraOff);
+        //init banners
+        OptionEntry bannerOn = new OptionEntry("On", 10.0, 5.0, "Addition", "Addition" );
+        OptionEntry bannerOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        options[3] = new Option("Banner", bannerOn,bannerOff);
+        //init newsletters
+        OptionEntry newsLetterOn = new OptionEntry("On", 1.2, 1.0, "Multiplication","Multiplication");
+        OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
+        //init advertisements
+        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
+        OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
+        //init the combo box
+        
     }
 
     /**
@@ -48,15 +74,12 @@ public class App2 extends javax.swing.JFrame {
         notificationSetting1 = new javax.swing.JToggleButton();
         notificationSetting2 = new javax.swing.JToggleButton();
         notificationSetting3 = new javax.swing.JToggleButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
-        jLabel1.setText("APP NAME ");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setText("OurTube");
 
         privacySetting1.setBackground(new java.awt.Color(153, 255, 153));
         privacySetting1.setSelected(true);
@@ -79,10 +102,15 @@ public class App2 extends javax.swing.JFrame {
         privacySetting3.setBackground(new java.awt.Color(153, 255, 153));
         privacySetting3.setSelected(true);
         privacySetting3.setText("On");
+        privacySetting3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                privacySetting3ActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("Setting 1");
+        jLabel2.setText("location");
 
-        jLabel3.setText("Setting 2");
+        jLabel3.setText("Picture");
 
         jLabel4.setText("Setting 3");
 
@@ -96,7 +124,7 @@ public class App2 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                         .addComponent(privacySetting1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,11 +158,11 @@ public class App2 extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Privacy", jPanel1);
 
-        jLabel5.setText("Setting 1");
+        jLabel5.setText("Banners");
 
-        jLabel6.setText("Setting 2");
+        jLabel6.setText("NewsLetter");
 
-        jLabel7.setText("Setting 3");
+        jLabel7.setText("Advertisements");
 
         notificationSetting1.setBackground(new java.awt.Color(153, 255, 153));
         notificationSetting1.setSelected(true);
@@ -157,8 +185,11 @@ public class App2 extends javax.swing.JFrame {
         notificationSetting3.setBackground(new java.awt.Color(153, 255, 153));
         notificationSetting3.setSelected(true);
         notificationSetting3.setText("On");
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        notificationSetting3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notificationSetting3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -169,7 +200,7 @@ public class App2 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                         .addComponent(notificationSetting3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -180,7 +211,6 @@ public class App2 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(notificationSetting1)))
                 .addContainerGap())
-            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,9 +227,7 @@ public class App2 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(notificationSetting3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Notificaion", jPanel2);
@@ -225,28 +253,103 @@ public class App2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        private static final Option [] option1 = new Option [1];
-        public static App app = new App("ashdsauhdjas", option1);
+        public static App app = new App("OurTube", options);
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
-        // TODO add your handling code here:
-        privacySetting1.setBackground(Color.red);
-        privacySetting1.setText("Off");
+        //if the button is selected change the button to green and selected obj to On
+        if (privacySetting1.isSelected()){
+            options[0].SelectEntry("On"); 
+            privacySetting1.setBackground(Color.green);
+            privacySetting1.setText("On");
+        }
         
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!privacySetting1.isSelected()){
+            options[0].SelectEntry("Off"); 
+            privacySetting1.setBackground(Color.red);
+            privacySetting1.setText("Off");
+        
+        }        
     }//GEN-LAST:event_privacySetting1ActionPerformed
 
     private void notificationSetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting1ActionPerformed
-        // TODO add your handling code here:
+        //if the button is selected change the button to green and selected obj to On
+        if (notificationSetting1.isSelected()){
+            options[3].SelectEntry("On"); 
+            privacySetting1.setBackground(Color.green);
+            privacySetting1.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!notificationSetting1.isSelected()){
+            options[3].SelectEntry("Off");
+            privacySetting1.setBackground(Color.red);
+            privacySetting1.setText("Off");
+        }
     }//GEN-LAST:event_notificationSetting1ActionPerformed
 
     private void privacySetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting2ActionPerformed
-        privacySetting2.setBackground(Color.red);
-        privacySetting2.setText("Off");        
+        //if the button is selected change the button to green and selected obj to On
+        if (privacySetting2.isSelected()){
+            options[1].SelectEntry("On"); 
+            privacySetting2.setBackground(Color.green);
+            privacySetting2.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!privacySetting2.isSelected()){
+            options[1].SelectEntry("Off"); 
+            privacySetting2.setBackground(Color.red);
+            privacySetting2.setText("Off");
+        }             
     }//GEN-LAST:event_privacySetting2ActionPerformed
 
     private void notificationSetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting2ActionPerformed
-        // TODO add your handling code here:
-        notificationSetting1.setBackground(Color.red);
+        //if the button is selected change the button to green and selected obj to On
+        if (notificationSetting2.isSelected()){
+            options[4].SelectEntry("On"); 
+            privacySetting2.setBackground(Color.green);
+            privacySetting2.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!notificationSetting2.isSelected()){
+            options[4].SelectEntry("Off");
+            privacySetting2.setBackground(Color.red);
+            privacySetting2.setText("Off");
+        }
     }//GEN-LAST:event_notificationSetting2ActionPerformed
+
+    private void privacySetting3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting3ActionPerformed
+        //if the button is selected change the button to green and selected obj to On
+        if (privacySetting3.isSelected()){
+            options[2].SelectEntry("On"); 
+            privacySetting1.setBackground(Color.green);
+            privacySetting1.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!privacySetting3.isSelected()){
+            options[2].SelectEntry("Off");
+            privacySetting1.setBackground(Color.red);
+            privacySetting1.setText("Off");
+        }
+    }//GEN-LAST:event_privacySetting3ActionPerformed
+
+    private void notificationSetting3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting3ActionPerformed
+        //if the button is selected change the button to green and selected obj to On
+        if (notificationSetting3.isSelected()){
+            options[5].SelectEntry("On"); 
+            privacySetting3.setBackground(Color.green);
+            privacySetting3.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!notificationSetting3.isSelected()){
+            options[5].SelectEntry("Off");
+            privacySetting3.setBackground(Color.red);
+            privacySetting3.setText("Off");
+        }
+    }//GEN-LAST:event_notificationSetting3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,8 +390,7 @@ public class App2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<OptionEntry> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

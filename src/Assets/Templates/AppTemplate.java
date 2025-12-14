@@ -1,4 +1,6 @@
 package Assets.Templates;
+import Objects.Option;
+import Objects.OptionEntry;
 import java.util.HashMap;
 import java.awt.Color;
 
@@ -12,7 +14,7 @@ import java.awt.Color;
  * @author Terrence
  */
 public class AppTemplate extends javax.swing.JFrame {
-
+    private final static Option[] options = new Option[6];
     /**
      * Creates new form defaultSetting
      */
@@ -224,7 +226,9 @@ public class AppTemplate extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//The Template for the app mainly used for GUI elements
+    
+    
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
         // TODO add your handling code here:
         privacySetting1.setBackground(Color.red);

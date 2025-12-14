@@ -11,35 +11,41 @@ import utils.*;
  * @author 344179247
  */
 public class App1 extends javax.swing.JFrame {
-    private final static Option[] options = new Option[1];
+    private final static Option[] options = new Option[6];
     /**
      * Creates new form App1
      */
     public App1() {
         initComponents();
         //Init location Options and Option Entries
-        OptionEntry locationOn = new OptionEntry("On", );
+        OptionEntry locationOn = new OptionEntry("On", 2.0, 20, "Multiplication", "Addition");
         OptionEntry locationOff = new OptionEntry ("Off", 0.0, 0.0, "Addition","Addition");
         options[0] = new Option ("Location", locationOn, locationOff);
         //init pictures
-        OptionEntry picturesOn = new OptionEntry("On",);
+        OptionEntry picturesOn = new OptionEntry("On", 2.0, 2.0, "Multiplication", "Multiplication");
         OptionEntry picturesOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[1] = new Option("Pictures", picturesOn, picturesOff);
         //init camera
-        OptionEntry cameraOn = new OptionEntry("On",);
+        OptionEntry cameraOn = new OptionEntry("On", 1.5,1.1, "Multiplication", "Multiplication" );
         OptionEntry cameraOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[2] = new Option("Camera", cameraOn, cameraOff);
         //init banners
-        OptionEntry bannerOn = new OptionEntry("On",);
+        OptionEntry bannerOn = new OptionEntry("On", 10.0, 5.0, "Addition", "Addition" );
         OptionEntry bannerOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
-        options[3] = new Option("Banner", cameraOn,cameraOff);
+        options[3] = new Option("Banner", bannerOn,bannerOff);
         //init newsletters
-        OptionEntry newsLetterOn = new OptionEntry("On", 0.0, 0.0, "Addition","Addition");
+        OptionEntry newsLetterOn = new OptionEntry("On", 1.2, 1.0, "Multiplication","Multiplication");
         OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
-        OptionEntry advertisementsOn = new OptionEntry("On", 0.0, 0.0, "Addition","Addition");
+        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
+        //init combo box
+        OptionEntry everyone = new OptionEntry("everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
+        OptionEntry onlyMe = new OptionEntry("onlyMe", 0.0,0.0, "Addition", "Addition");
+        OptionEntry friends = new OptionEntry("friends", 1.1,1.75,"Multiplication","Multiplication" );
+        options[6] = new Option("posts",everyone,friends ,onlyMe);
     }
 
     /**
@@ -72,13 +78,14 @@ public class App1 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        posts = new javax.swing.JComboBox<>();
         privacySetting4 = new javax.swing.JToggleButton();
         privacySetting5 = new javax.swing.JToggleButton();
         privacySetting6 = new javax.swing.JToggleButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -86,7 +93,6 @@ public class App1 extends javax.swing.JFrame {
         notificationSetting4 = new javax.swing.JToggleButton();
         notificationSetting5 = new javax.swing.JToggleButton();
         notificationSetting6 = new javax.swing.JToggleButton();
-        jComboBox4 = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
@@ -247,7 +253,11 @@ public class App1 extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("YZ ");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        posts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                postsActionPerformed(evt);
+            }
+        });
 
         privacySetting4.setBackground(new java.awt.Color(153, 255, 153));
         privacySetting4.setSelected(true);
@@ -282,19 +292,23 @@ public class App1 extends javax.swing.JFrame {
 
         jLabel11.setText("Camera");
 
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Who Has Access To Your Posts?");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addComponent(posts, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                        .addComponent(privacySetting4))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addComponent(privacySetting4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addComponent(jLabel11))
@@ -320,8 +334,10 @@ public class App1 extends javax.swing.JFrame {
                     .addComponent(privacySetting6)
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addComponent(jLabel16)
+                .addGap(4, 4, 4)
+                .addComponent(posts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Privacy", jPanel3);
@@ -357,8 +373,6 @@ public class App1 extends javax.swing.JFrame {
             }
         });
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel15.setText("Advertisements");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -385,7 +399,6 @@ public class App1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(notificationSetting6)))
                 .addContainerGap())
-            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,9 +416,7 @@ public class App1 extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(notificationSetting6)
                     .addComponent(jLabel15))
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Notificaion", jPanel4);
@@ -430,7 +441,6 @@ public class App1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    OptionEntry [] app1Settings = new OptionEntry [6];    
     public static App app = new App("yz", options);
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
     }//GEN-LAST:event_privacySetting1ActionPerformed
@@ -441,12 +451,14 @@ public class App1 extends javax.swing.JFrame {
     private void notificationSetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting2ActionPerformed
     }//GEN-LAST:event_notificationSetting2ActionPerformed
     private void privacySetting4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting4ActionPerformed
+        //if the button is selected change the button to green and selected obj to On
         if (privacySetting4.isSelected()){
             options[0].SelectEntry("On"); 
             privacySetting4.setBackground(Color.green);
             privacySetting4.setText("On");
         }
         
+        //if the button is not selected turn the button off and selected obj to off 
         if (!privacySetting4.isSelected()){
             options[0].SelectEntry("Off"); 
             privacySetting4.setBackground(Color.red);
@@ -454,12 +466,14 @@ public class App1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_privacySetting4ActionPerformed
     private void privacySetting5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting5ActionPerformed
+        //if the button is selected change the button to green and the selected obj to on
         if (privacySetting5.isSelected()){
             options[1].SelectEntry("On"); 
             privacySetting5.setBackground(Color.green);
             privacySetting5.setText("On");
         }
         
+        //if the button is not selected turn the button off and selected obj to off
         if (!privacySetting5.isSelected()){
             options[1].SelectEntry("Off");
             privacySetting5.setBackground(Color.red);
@@ -468,13 +482,14 @@ public class App1 extends javax.swing.JFrame {
     }//GEN-LAST:event_privacySetting5ActionPerformed
 
     private void notificationSetting4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting4ActionPerformed
-        // TODO add your handling code here:
+        //if the button is selected change the button to green and the selected obj to on
         if (notificationSetting4.isSelected()){
             options[3].SelectEntry("On"); 
             notificationSetting4.setBackground(Color.green);
             notificationSetting4.setText("On");
         }
         
+        //if the button is not selected turn the button off and selected obj to off
         if (!notificationSetting4.isSelected()){
             options[3].SelectEntry("Off");
             notificationSetting4.setBackground(Color.red);
@@ -483,12 +498,14 @@ public class App1 extends javax.swing.JFrame {
     }//GEN-LAST:event_notificationSetting4ActionPerformed
 
     private void notificationSetting5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting5ActionPerformed
+        //if the button is selected change the button to green and the selected obj to on
         if (notificationSetting5.isSelected()){
             options[4].SelectEntry("On");
             notificationSetting5.setBackground(Color.green);
             notificationSetting5.setText("On");
         }
         
+        //if the button is not selected turn the button off and selected obj to off
         if (!notificationSetting5.isSelected()){
             options[4].SelectEntry("Off");
             notificationSetting5.setBackground(Color.red);
@@ -497,11 +514,13 @@ public class App1 extends javax.swing.JFrame {
     }//GEN-LAST:event_notificationSetting5ActionPerformed
 
     private void notificationSetting6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting6ActionPerformed
+        //if the button is selected change the button to green and the selected obj to on
         if (notificationSetting6.isSelected()){
             options[5].SelectEntry("On");
             notificationSetting6.setBackground(Color.green);
             notificationSetting6.setText("On");
         }
+        //if the button is not selected turn the button off and selected obj to off
         
         if (!notificationSetting6.isSelected()){
             options[5].SelectEntry("Off");
@@ -511,11 +530,13 @@ public class App1 extends javax.swing.JFrame {
     }//GEN-LAST:event_notificationSetting6ActionPerformed
 
     private void privacySetting6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting6ActionPerformed
+        //if the button is selected change the button to green and the selected obj to on
         if (privacySetting6.isSelected()){
             options[2].SelectEntry("Off");
             privacySetting6.setBackground(Color.green);
             privacySetting6.setText("On");
         }
+        //if the button is not selected turn the button off and selected obj to off
         
         if (!privacySetting6.isSelected()){
             options[2].SelectEntry("Off");
@@ -523,6 +544,12 @@ public class App1 extends javax.swing.JFrame {
             privacySetting6.setText("Off");
         }
     }//GEN-LAST:event_privacySetting6ActionPerformed
+
+    private void postsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postsActionPerformed
+        //gets the selected item from the combo box and turns it into the selected item for options[6]
+        OptionEntry x = (OptionEntry) posts.getSelectedItem();
+        options[6].SelectEntry(x.GetName());
+    }//GEN-LAST:event_postsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -562,8 +589,6 @@ public class App1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -571,6 +596,7 @@ public class App1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -591,6 +617,7 @@ public class App1 extends javax.swing.JFrame {
     private javax.swing.JToggleButton notificationSetting4;
     private javax.swing.JToggleButton notificationSetting5;
     private javax.swing.JToggleButton notificationSetting6;
+    private javax.swing.JComboBox<OptionEntry> posts;
     private javax.swing.JToggleButton privacySetting1;
     private javax.swing.JToggleButton privacySetting2;
     private javax.swing.JToggleButton privacySetting3;

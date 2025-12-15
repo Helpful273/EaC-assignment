@@ -42,18 +42,12 @@ public class Main extends javax.swing.JFrame {
 
         OpenApp = new javax.swing.JButton();
         AppsList = new javax.swing.JComboBox<>();
-        Label1 = new javax.swing.JLabel();
-        Label2 = new javax.swing.JLabel();
-        Label3 = new javax.swing.JLabel();
-        Label4 = new javax.swing.JLabel();
-        Label5 = new javax.swing.JLabel();
-        Label6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        label1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        privacy = new javax.swing.JLabel();
+        utility = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -71,66 +65,48 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        Label1.setText("jLabel1");
+        label1.setText("Total Score");
 
-        Label2.setText("jLabel2");
-
-        Label3.setText("jLabel3");
-
-        Label4.setText("jLabel4");
-
-        Label5.setText("jLabel5");
-
-        Label6.setText("jLabel6");
-
-        jButton2.setText("Update Scores");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Calculate Total");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("App 1");
+        privacy.setText("Privacy");
 
-        jLabel2.setText("App 2");
+        utility.setText("Utility");
 
-        jLabel3.setText("App 3");
+        jLabel1.setText("Privacy Score");
 
-        jLabel4.setText("Privacy Score");
-
-        jLabel5.setText("Utility Score");
+        jLabel2.setText("Utility Score");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(AppsList, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(OpenApp)
-                .addGap(90, 90, 90)
-                .addComponent(jButton2)
-                .addGap(41, 41, 41))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addGap(60, 60, 60)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(Label1)
-                    .addComponent(Label3)
-                    .addComponent(Label5))
-                .addGap(97, 97, 97)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(AppsList, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(privacy, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(utility, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Label6)
-                    .addComponent(Label4)
-                    .addComponent(Label2)
-                    .addComponent(jLabel5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1)
+                    .addComponent(OpenApp))
+                .addGap(238, 238, 238))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,32 +114,23 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(OpenApp)
-                            .addComponent(jButton2)))
+                        .addComponent(OpenApp))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(AppsList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
+                    .addComponent(label1)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(Label1)
-                    .addComponent(Label2))
-                .addGap(56, 56, 56)
+                    .addComponent(privacy)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(Label3)
-                    .addComponent(Label4))
-                .addGap(69, 69, 69)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Label6)
-                    .addComponent(Label5)
-                    .addComponent(jLabel3))
-                .addGap(198, 198, 198))
+                    .addComponent(utility)
+                    .addComponent(jLabel2))
+                .addContainerGap(327, Short.MAX_VALUE))
         );
 
         pack();
@@ -200,6 +167,14 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_AppsListActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // calculates total scores across all three apps
+        double pm = App1.app.GetTotalUXScore() + App2.app.GetTotalUXScore() + App3.app.GetTotalUXScore();
+        double um = App1.app.GetTotalPrivacyScore() + App2.app.GetTotalPrivacyScore() + App3.app.GetTotalPrivacyScore();      
+        privacy.setText(String.valueOf(pm));
+        utility.setText(String.valueOf(um));
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -233,18 +208,12 @@ public class Main extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<App> AppsList;
-    private javax.swing.JLabel Label1;
-    private javax.swing.JLabel Label2;
-    private javax.swing.JLabel Label3;
-    private javax.swing.JLabel Label4;
-    private javax.swing.JLabel Label5;
-    private javax.swing.JLabel Label6;
     private javax.swing.JButton OpenApp;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel label1;
+    private javax.swing.JLabel privacy;
+    private javax.swing.JLabel utility;
     // End of variables declaration//GEN-END:variables
 }

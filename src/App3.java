@@ -1,5 +1,3 @@
-
-
 import Assets.Templates.*;
 import java.awt.Color;
 import Objects.*; 
@@ -14,7 +12,8 @@ import Objects.*;
  * @author 344179247
  */
 public class App3 extends javax.swing.JFrame {
-    Option []options = new Option[7];
+    private static final Option [] options = new Option[7];
+    public static App app;
     /**
      * Creates new form defaultSetting
      */
@@ -52,6 +51,8 @@ public class App3 extends javax.swing.JFrame {
         posts.addItem("Only Me");
         posts.addItem("Friends");
         posts.addItem("Everyone");
+        
+        app = new App("FootBook", options[0], options[1], options[2], options[3], options[4], options[5], options[6]);
     }
 
     /**
@@ -86,7 +87,7 @@ public class App3 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MeTube");
+        jLabel1.setText("FootBook");
 
         posts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,8 +266,7 @@ public class App3 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-private static final Option [] option1 = new Option[1];
-public static App app = new App("FootBook", option1);
+
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
         //if the button is selected change the button to green and selected obj to On
         if (privacySetting1.isSelected()){

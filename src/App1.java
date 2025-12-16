@@ -12,6 +12,7 @@ import Utils.*;
  */
 public class App1 extends javax.swing.JFrame {
     private final static Option[] options = new Option[7];
+    public static App app;
     /**
      * Creates new form App1
      */
@@ -46,9 +47,12 @@ public class App1 extends javax.swing.JFrame {
         OptionEntry onlyMe = new OptionEntry("Only Me", 0.0,0.0, "Addition", "Addition");
         OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication","Multiplication" );
         options[6] = new Option("posts",everyone,friends ,onlyMe);
+        
         posts.addItem("Only Me");
         posts.addItem("Friends");
         posts.addItem("Everyone");
+        
+        app = new App("yz", options[0], options[1], options[2], options[3], options[4], options[5], options[6]);
     }
 
     /**
@@ -444,7 +448,7 @@ public class App1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public static App app = new App("yz", options);
+
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
     }//GEN-LAST:event_privacySetting1ActionPerformed
     private void privacySetting2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting2ActionPerformed

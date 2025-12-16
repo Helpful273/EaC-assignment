@@ -15,6 +15,7 @@ import Objects.*;
  */
 public class App2 extends javax.swing.JFrame {
     private final static Option[] options = new Option[7];
+    public static App app;
     /**
      * Creates new form defaultSetting
      */
@@ -46,6 +47,7 @@ public class App2 extends javax.swing.JFrame {
         options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
         //init the combo box
         
+        app = new App("OurTube", options[0], options[1], options[2], options[3], options[4], options[5]);
     }
 
     /**
@@ -262,7 +264,7 @@ public class App2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        public static App app = new App("OurTube", options);
+
     private void privacySetting1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting1ActionPerformed
         //if the button is selected change the button to green and selected obj to On
         if (privacySetting1.isSelected()){

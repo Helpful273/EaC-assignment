@@ -22,8 +22,7 @@ public class App {
     public App(String name, Option... privacySettings){
         this.name = name;
         for (Option option : privacySettings){
-            //broken rn
-            //this.options.put(option.GetName(),option);
+            this.options.put(option.GetName(), option);
         }
     }
     /*

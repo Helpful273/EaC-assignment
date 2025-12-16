@@ -41,5 +41,10 @@ public class MaillingList extends Option {
         }
 
     }
+    //overridden method to also include corpname in setting name
+    @Override
+        public String GetName() {
+        return super.GetName()+" for "+this.corpName;
+    }
 
 }

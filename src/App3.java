@@ -14,7 +14,7 @@ import Objects.*;
  * @author 344179247
  */
 public class App3 extends javax.swing.JFrame {
-    Option []options = new Option[6];
+    Option []options = new Option[7];
     /**
      * Creates new form defaultSetting
      */
@@ -45,6 +45,13 @@ public class App3 extends javax.swing.JFrame {
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
         //init the combo box
+        OptionEntry everyone = new OptionEntry("Everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
+        OptionEntry onlyMe = new OptionEntry("OnlyMe", 0.0,0.0, "Addition", "Addition");
+        OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication","Multiplication" );
+        options[6] = new Option("posts",everyone,friends ,onlyMe);
+        posts.addItem("Only Me");
+        posts.addItem("Friends");
+        posts.addItem("Everyone");
     }
 
     /**
@@ -59,7 +66,7 @@ public class App3 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        posts = new javax.swing.JComboBox<>();
         privacySetting1 = new javax.swing.JToggleButton();
         privacySetting2 = new javax.swing.JToggleButton();
         privacySetting3 = new javax.swing.JToggleButton();
@@ -80,6 +87,12 @@ public class App3 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MeTube");
+
+        posts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                postsActionPerformed(evt);
+            }
+        });
 
         privacySetting1.setBackground(new java.awt.Color(153, 255, 153));
         privacySetting1.setSelected(true);
@@ -102,6 +115,11 @@ public class App3 extends javax.swing.JFrame {
         privacySetting3.setBackground(new java.awt.Color(153, 255, 153));
         privacySetting3.setSelected(true);
         privacySetting3.setText("On");
+        privacySetting3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                privacySetting3ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Location");
 
@@ -113,7 +131,7 @@ public class App3 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(posts, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,7 +165,7 @@ public class App3 extends javax.swing.JFrame {
                     .addComponent(privacySetting3)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(posts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
@@ -180,6 +198,11 @@ public class App3 extends javax.swing.JFrame {
         notificationSetting3.setBackground(new java.awt.Color(153, 255, 153));
         notificationSetting3.setSelected(true);
         notificationSetting3.setText("On");
+        notificationSetting3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notificationSetting3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -265,15 +288,15 @@ public static App app = new App("FootBook", option1);
         //if the button is selected change the button to green and selected obj to On
         if (notificationSetting1.isSelected()){
             options[3].SelectEntry("On"); 
-            privacySetting1.setBackground(Color.green);
-            privacySetting1.setText("On");
+            notificationSetting1.setBackground(Color.green);
+            notificationSetting1.setText("On");
         }
         
         //if the button is not selected turn the button off and selected obj to off 
         if (!notificationSetting1.isSelected()){
             options[3].SelectEntry("Off");
-            privacySetting1.setBackground(Color.red);
-            privacySetting1.setText("Off");
+            notificationSetting1.setBackground(Color.red);
+            notificationSetting1.setText("Off");
         }
     }//GEN-LAST:event_notificationSetting1ActionPerformed
 
@@ -297,17 +320,62 @@ public static App app = new App("FootBook", option1);
         //if the button is selected change the button to green and selected obj to On
         if (notificationSetting2.isSelected()){
             options[4].SelectEntry("On"); 
-            privacySetting2.setBackground(Color.green);
-            privacySetting2.setText("On");
+            notificationSetting2.setBackground(Color.green);
+            notificationSetting2.setText("On");
         }
         
         //if the button is not selected turn the button off and selected obj to off 
         if (!notificationSetting2.isSelected()){
             options[4].SelectEntry("Off");
-            privacySetting2.setBackground(Color.red);
-            privacySetting2.setText("Off");
+            notificationSetting2.setBackground(Color.red);
+            notificationSetting2.setText("Off");
         }
     }//GEN-LAST:event_notificationSetting2ActionPerformed
+
+    private void postsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postsActionPerformed
+        // TODO add your handling code here:
+        String x = (String) posts.getSelectedItem();
+        options[6].SelectEntry(x);
+        
+        
+        
+    }//GEN-LAST:event_postsActionPerformed
+
+    private void privacySetting3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privacySetting3ActionPerformed
+        //if the button is selected change the button to green and selected obj to On
+        if (privacySetting3.isSelected()){
+            options[2].SelectEntry("On"); 
+            privacySetting3.setBackground(Color.green);
+            privacySetting3.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!privacySetting3.isSelected()){
+            options[2].SelectEntry("Off");
+            privacySetting3.setBackground(Color.red);
+            privacySetting3.setText("Off");
+        }
+    }//GEN-LAST:event_privacySetting3ActionPerformed
+
+    private void notificationSetting3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationSetting3ActionPerformed
+        //if the button is selected change the button to green and selected obj to On
+        if (notificationSetting3.isSelected()){
+            options[5].SelectEntry("On"); 
+            notificationSetting3.setBackground(Color.green);
+            notificationSetting3.setText("On");
+        }
+        
+        //if the button is not selected turn the button off and selected obj to off 
+        if (!notificationSetting3.isSelected()){
+            options[5].SelectEntry("Off");
+            notificationSetting3.setBackground(Color.red);
+            notificationSetting3.setText("Off");
+        }
+
+
+
+
+    }//GEN-LAST:event_notificationSetting3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -348,7 +416,6 @@ public static App app = new App("FootBook", option1);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<OptionEntry> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -362,6 +429,7 @@ public static App app = new App("FootBook", option1);
     private javax.swing.JToggleButton notificationSetting1;
     private javax.swing.JToggleButton notificationSetting2;
     private javax.swing.JToggleButton notificationSetting3;
+    private javax.swing.JComboBox<String> posts;
     private javax.swing.JToggleButton privacySetting1;
     private javax.swing.JToggleButton privacySetting2;
     private javax.swing.JToggleButton privacySetting3;

@@ -5,13 +5,13 @@
 
 import Objects.*; 
 import java.awt.Color;
-import utils.*;
+import Utils.*;
 /**
  *
  * @author 344179247
  */
 public class App1 extends javax.swing.JFrame {
-    private final static Option[] options = new Option[6];
+    private final static Option[] options = new Option[7];
     /**
      * Creates new form App1
      */
@@ -42,10 +42,13 @@ public class App1 extends javax.swing.JFrame {
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
         //init combo box
-        OptionEntry everyone = new OptionEntry("everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
-        OptionEntry onlyMe = new OptionEntry("onlyMe", 0.0,0.0, "Addition", "Addition");
-        OptionEntry friends = new OptionEntry("friends", 1.1,1.75,"Multiplication","Multiplication" );
+        OptionEntry everyone = new OptionEntry("Everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
+        OptionEntry onlyMe = new OptionEntry("Only Me", 0.0,0.0, "Addition", "Addition");
+        OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication","Multiplication" );
         options[6] = new Option("posts",everyone,friends ,onlyMe);
+        posts.addItem("Only Me");
+        posts.addItem("Friends");
+        posts.addItem("Everyone");
     }
 
     /**
@@ -547,8 +550,8 @@ public class App1 extends javax.swing.JFrame {
 
     private void postsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postsActionPerformed
         //gets the selected item from the combo box and turns it into the selected item for options[6]
-        OptionEntry x = (OptionEntry) posts.getSelectedItem();
-        options[6].SelectEntry(x.GetName());
+        String x = (String) posts.getSelectedItem();
+        options[6].SelectEntry(x);
     }//GEN-LAST:event_postsActionPerformed
 
     /**
@@ -617,7 +620,7 @@ public class App1 extends javax.swing.JFrame {
     private javax.swing.JToggleButton notificationSetting4;
     private javax.swing.JToggleButton notificationSetting5;
     private javax.swing.JToggleButton notificationSetting6;
-    private javax.swing.JComboBox<OptionEntry> posts;
+    private javax.swing.JComboBox<String> posts;
     private javax.swing.JToggleButton privacySetting1;
     private javax.swing.JToggleButton privacySetting2;
     private javax.swing.JToggleButton privacySetting3;

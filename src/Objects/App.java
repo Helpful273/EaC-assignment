@@ -17,12 +17,13 @@ public class App {
     /*
     The Constructor for the app
     @param name the name of the app
-    @param privacySettings is an array of Options
+    @param privacySettings is an array of Options created using varargs 
     */
     public App(String name, Option... privacySettings){
         this.name = name;
         for (Option option : privacySettings){
-            this.options.put(option.GetName(),option);
+            //broken rn
+            //this.options.put(option.GetName(),option);
         }
     }
     /*
@@ -48,7 +49,7 @@ public class App {
         OptionEntry [] optionEntries = new OptionEntry[this.options.size()];
         double score = 0.0;
         int counter = 0;
-        for (Option option: options.values()){
+        for (Option option: this.options.values()){
             //gets the option from the options hashmap. Then gets the option entry from the option that we have and runs Calc Privacy Score on that SettingEntry
             optionEntries[counter] = option.GetSelectedEntry();
             counter ++;

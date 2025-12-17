@@ -20,7 +20,7 @@ public class Sort {
                 
                 if (currentEntry.GetOrderOfOperation() > comparatorEntry.GetOrderOfOperation()) {
                     optionEntries[j] = comparatorEntry;
-                    optionEntries[j+1] = currentEntry;
+                    optionEntries[j] = currentEntry;
                 }
             } 
         }

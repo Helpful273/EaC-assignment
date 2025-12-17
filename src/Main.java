@@ -139,6 +139,25 @@ public class Main extends javax.swing.JFrame {
     private void OpenAppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenAppActionPerformed
         App selectedApp = (App) AppsList.getSelectedItem();
         
+        
+        /*
+        gets array of options from selected app
+        loops through to find maillinglist
+        makes maillinglist object
+        checks if on
+        if yes, calls method to show mail
+        */
+        Option[] optionArray = Option selectedApp.GetOption();
+        for (int a=0;a<optionArray.length; a++){
+            if(optionArray[a] instanceof MaillingList){
+               MaillingList selectedMail= MaillingList optionArray[a];
+               if(selectedMail.GetSelectedEntry.equals("on")){
+                   selectedMail.showMail();
+               }
+            }
+        }
+
+        
         for (HashMap<String, Object> appHash: apps) {
             App app = (App) appHash.get("AppData");
             if (app.GetAppName().equals(selectedApp.GetAppName())) {

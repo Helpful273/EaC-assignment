@@ -12,22 +12,27 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         
+        // create hash ref for app1 (UI and object)
         HashMap<String, Object> app1Container = new HashMap<>();
         app1Container.put("JFrame", new App1());
         app1Container.put("AppData", App1.app);
         
+        // create hash ref for app2 (UI and object)
         HashMap<String, Object> app2Container = new HashMap<>();
         app2Container.put("JFrame", new App2());
         app2Container.put("AppData", App2.app);
         
+        // create hash ref for app3 (UI and object)
         HashMap<String, Object> app3Container = new HashMap<>();
         app3Container.put("JFrame", new App3());
         app3Container.put("AppData", App3.app);
         
+        // add hash to arrays
         apps.add(app1Container);
         apps.add(app2Container);
         apps.add(app3Container);
         
+        // loop through all hash in array to get object and insert to jcombo box
         for (HashMap<String, Object> appHash: apps) {
             App app = (App) appHash.get("AppData");
             AppsList.addItem(app);

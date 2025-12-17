@@ -35,7 +35,7 @@ public class App1 extends javax.swing.JFrame {
         OptionEntry bannerOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[3] = new Option("Banner", bannerOn,bannerOff);
         //init newsletters
-        OptionEntry newsLetterOn = new OptionEntry("On", 1.2, 1.0, "Multiplication","Multiplication");
+        OptionEntry newsLetterOn = new OptionEntry("Adds On", 1.2, 1.0, "Multiplication","Multiplication");
         OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
@@ -253,7 +253,7 @@ public class App1 extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Notificaion", jPanel2);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
@@ -266,7 +266,7 @@ public class App1 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting4.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting4.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting4.setSelected(true);
         privacySetting4.setText("On");
         privacySetting4.addActionListener(new java.awt.event.ActionListener() {
@@ -275,7 +275,7 @@ public class App1 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting5.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting5.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting5.setSelected(true);
         privacySetting5.setText("On");
         privacySetting5.addActionListener(new java.awt.event.ActionListener() {
@@ -284,7 +284,7 @@ public class App1 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting6.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting6.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting6.setSelected(true);
         privacySetting6.setText("On");
         privacySetting6.addActionListener(new java.awt.event.ActionListener() {
@@ -353,7 +353,7 @@ public class App1 extends javax.swing.JFrame {
 
         jLabel13.setText("Newsletters");
 
-        notificationSetting4.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting4.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting4.setSelected(true);
         notificationSetting4.setText("On");
         notificationSetting4.addActionListener(new java.awt.event.ActionListener() {
@@ -362,7 +362,7 @@ public class App1 extends javax.swing.JFrame {
             }
         });
 
-        notificationSetting5.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting5.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting5.setSelected(true);
         notificationSetting5.setText("On");
         notificationSetting5.addActionListener(new java.awt.event.ActionListener() {
@@ -371,7 +371,7 @@ public class App1 extends javax.swing.JFrame {
             }
         });
 
-        notificationSetting6.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting6.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting6.setSelected(true);
         notificationSetting6.setText("On");
         notificationSetting6.addActionListener(new java.awt.event.ActionListener() {

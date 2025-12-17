@@ -16,7 +16,7 @@ public class Sort {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 OptionEntry currentEntry = optionEntries[j];
-                OptionEntry comparatorEntry = optionEntries[j+1];
+                OptionEntry comparatorEntry = optionEntries[j];
                 
                 if (currentEntry.GetOrderOfOperation() > comparatorEntry.GetOrderOfOperation()) {
                     optionEntries[j] = comparatorEntry;

@@ -17,12 +17,12 @@ public class Main extends javax.swing.JFrame {
         app1Container.put("AppData", App1.app);
         
         HashMap<String, Object> app2Container = new HashMap<>();
-        app1Container.put("JFrame", new App2());
-        app1Container.put("AppData", App2.app);
+        app2Container.put("JFrame", new App2());
+        app2Container.put("AppData", App2.app);
         
         HashMap<String, Object> app3Container = new HashMap<>();
-        app1Container.put("JFrame", new App3());
-        app1Container.put("AppData", App3.app);
+        app3Container.put("JFrame", new App3());
+        app3Container.put("AppData", App3.app);
         
         apps.add(app1Container);
         apps.add(app2Container);

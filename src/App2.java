@@ -42,12 +42,21 @@ public class App2 extends javax.swing.JFrame {
         OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
-        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
+        OptionEntry advertisementsOn = new OptionEntry("Adds On", 2.0, 1.0, "Multiplication","Multiplication");
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
-        options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
+        options[5] = new MaillingList("app2","Advertisements",advertisementsOn, advertisementsOff);
         //init the combo box
+        OptionEntry everyone = new OptionEntry("Everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
+        OptionEntry onlyMe = new OptionEntry("Only Me", 0.0,0.0, "Addition", "Addition");
+        OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication","Multiplication" );
+        options[6] = new Option("posts",everyone,friends ,onlyMe);
+        posts.addItem("Only Me");
+        posts.addItem("Friends");
+        posts.addItem("Everyone");        
         
-        app = new App("OurTube", options[0], options[1], options[2], options[3], options[4], options[5]);
+        
+        
+        app = new App("OurTube", options[0], options[1], options[2], options[3], options[4], options[5], options[6]);
     }
 
     /**
@@ -62,7 +71,7 @@ public class App2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        posts = new javax.swing.JComboBox<>();
         privacySetting1 = new javax.swing.JToggleButton();
         privacySetting2 = new javax.swing.JToggleButton();
         privacySetting3 = new javax.swing.JToggleButton();
@@ -78,13 +87,19 @@ public class App2 extends javax.swing.JFrame {
         notificationSetting2 = new javax.swing.JToggleButton();
         notificationSetting3 = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jLabel1.setText("OurTube");
 
-        privacySetting1.setBackground(new java.awt.Color(153, 255, 153));
+        posts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                postsActionPerformed(evt);
+            }
+        });
+
+        privacySetting1.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting1.setSelected(true);
         privacySetting1.setText("On");
         privacySetting1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +108,7 @@ public class App2 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting2.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting2.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting2.setSelected(true);
         privacySetting2.setText("On");
         privacySetting2.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +117,7 @@ public class App2 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting3.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting3.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting3.setSelected(true);
         privacySetting3.setText("On");
         privacySetting3.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +130,7 @@ public class App2 extends javax.swing.JFrame {
 
         jLabel3.setText("Picture");
 
-        jLabel4.setText("Setting 3");
+        jLabel4.setText("Camera");
 
         jLabel8.setText("Who can access your posts?");
 
@@ -123,7 +138,7 @@ public class App2 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(posts, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,7 +178,7 @@ public class App2 extends javax.swing.JFrame {
                 .addGap(8, 8, 8)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(posts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(86, Short.MAX_VALUE))
         );
 
@@ -171,11 +186,11 @@ public class App2 extends javax.swing.JFrame {
 
         jLabel5.setText("Banners");
 
-        jLabel6.setText("NewsLetter");
+        jLabel6.setText("Advertisements");
 
-        jLabel7.setText("Advertisements");
+        jLabel7.setText("Newsletter");
 
-        notificationSetting1.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting1.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting1.setSelected(true);
         notificationSetting1.setText("On");
         notificationSetting1.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +199,7 @@ public class App2 extends javax.swing.JFrame {
             }
         });
 
-        notificationSetting2.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting2.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting2.setSelected(true);
         notificationSetting2.setText("On");
         notificationSetting2.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +208,7 @@ public class App2 extends javax.swing.JFrame {
             }
         });
 
-        notificationSetting3.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting3.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting3.setSelected(true);
         notificationSetting3.setText("On");
         notificationSetting3.addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +226,7 @@ public class App2 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
                         .addComponent(notificationSetting3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -350,17 +365,23 @@ public class App2 extends javax.swing.JFrame {
         //if the button is selected change the button to green and selected obj to On
         if (notificationSetting3.isSelected()){
             options[5].SelectEntry("On"); 
-            privacySetting3.setBackground(Color.green);
-            privacySetting3.setText("On");
+            notificationSetting3.setBackground(Color.green);
+            notificationSetting3.setText("On");
         }
         
         //if the button is not selected turn the button off and selected obj to off 
         if (!notificationSetting3.isSelected()){
             options[5].SelectEntry("Off");
-            privacySetting3.setBackground(Color.red);
-            privacySetting3.setText("Off");
+            notificationSetting3.setBackground(Color.red);
+            notificationSetting3.setText("Off");
         }
     }//GEN-LAST:event_notificationSetting3ActionPerformed
+
+    private void postsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postsActionPerformed
+        String x = (String) posts.getSelectedItem();
+        options[6].SelectEntry(x);
+        System.out.print(x);
+    }//GEN-LAST:event_postsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -401,7 +422,6 @@ public class App2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<OptionEntry> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -416,6 +436,7 @@ public class App2 extends javax.swing.JFrame {
     private javax.swing.JToggleButton notificationSetting1;
     private javax.swing.JToggleButton notificationSetting2;
     private javax.swing.JToggleButton notificationSetting3;
+    private javax.swing.JComboBox<String> posts;
     private javax.swing.JToggleButton privacySetting1;
     private javax.swing.JToggleButton privacySetting2;
     private javax.swing.JToggleButton privacySetting3;

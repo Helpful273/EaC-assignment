@@ -1,4 +1,3 @@
-import Assets.Templates.*;
 import java.awt.Color;
 import Objects.*; 
 
@@ -40,12 +39,12 @@ public class App3 extends javax.swing.JFrame {
         OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
-        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
+        OptionEntry advertisementsOn = new OptionEntry("Adds On", 2.0, 1.0, "Multiplication","Multiplication");
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
-        options[5] = new Option("Advertisements",advertisementsOn, advertisementsOff);
+        options[5] = new MaillingList("App3","Advertisements",advertisementsOn, advertisementsOff);
         //init the combo box
         OptionEntry everyone = new OptionEntry("Everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
-        OptionEntry onlyMe = new OptionEntry("OnlyMe", 0.0,0.0, "Addition", "Addition");
+        OptionEntry onlyMe = new OptionEntry("Only Me", 0.0,0.0, "Addition", "Addition");
         OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication","Multiplication" );
         options[6] = new Option("posts",everyone,friends ,onlyMe);
         posts.addItem("Only Me");
@@ -82,7 +81,7 @@ public class App3 extends javax.swing.JFrame {
         notificationSetting2 = new javax.swing.JToggleButton();
         notificationSetting3 = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
@@ -95,7 +94,7 @@ public class App3 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting1.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting1.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting1.setSelected(true);
         privacySetting1.setText("On");
         privacySetting1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +103,7 @@ public class App3 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting2.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting2.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting2.setSelected(true);
         privacySetting2.setText("On");
         privacySetting2.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +112,7 @@ public class App3 extends javax.swing.JFrame {
             }
         });
 
-        privacySetting3.setBackground(new java.awt.Color(153, 255, 153));
+        privacySetting3.setBackground(new java.awt.Color(51, 255, 0));
         privacySetting3.setSelected(true);
         privacySetting3.setText("On");
         privacySetting3.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +177,7 @@ public class App3 extends javax.swing.JFrame {
 
         jLabel7.setText("Advertisements");
 
-        notificationSetting1.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting1.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting1.setSelected(true);
         notificationSetting1.setText("On");
         notificationSetting1.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +186,7 @@ public class App3 extends javax.swing.JFrame {
             }
         });
 
-        notificationSetting2.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting2.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting2.setSelected(true);
         notificationSetting2.setText("On");
         notificationSetting2.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +195,7 @@ public class App3 extends javax.swing.JFrame {
             }
         });
 
-        notificationSetting3.setBackground(new java.awt.Color(153, 255, 153));
+        notificationSetting3.setBackground(new java.awt.Color(51, 255, 0));
         notificationSetting3.setSelected(true);
         notificationSetting3.setText("On");
         notificationSetting3.addActionListener(new java.awt.event.ActionListener() {

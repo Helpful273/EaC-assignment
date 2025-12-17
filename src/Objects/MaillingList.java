@@ -26,6 +26,7 @@ public class MaillingList extends Option {
     public void showMail() {
         Random rand = new Random();
         int randomNumber = rand.nextInt(4);
+        System.out.print(randomNumber);
         if (randomNumber == 0) {
             new hotSingles().setVisible(true);
         }

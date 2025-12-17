@@ -79,7 +79,8 @@ public class App {
         return score;
     }
     /*
-    Gets all of the Options and returns it into a array because jerry hashmap verys scary
+    Gets all of the Options and returns it into a array 
+    @return returns the array with all of the options inside of it
     */
     public Option [] GetOption(){
         Option [] Options = new Option [7];

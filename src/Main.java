@@ -147,12 +147,13 @@ public class Main extends javax.swing.JFrame {
         checks if on
         if yes, calls method to show mail
         */
-        Option[] optionArray = Option selectedApp.GetOption();
+        Option[] optionArray = selectedApp.GetOption();
         for (int a=0;a<optionArray.length; a++){
             if(optionArray[a] instanceof MaillingList){
-               MaillingList selectedMail= MaillingList optionArray[a];
-               if(selectedMail.GetSelectedEntry.equals("on")){
-                   selectedMail.showMail();
+                System.out.print("abc");
+                MaillingList selectedMail = (MaillingList) optionArray[a];
+                if(selectedMail.GetSelectedEntry().GetName().equals("On")){
+                    selectedMail.showMail();
                }
             }
         }

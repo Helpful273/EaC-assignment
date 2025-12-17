@@ -23,32 +23,32 @@ public class App2 extends javax.swing.JFrame {
         initComponents();
          //Init location Options and Option Entries
         OptionEntry locationOn = new OptionEntry("On", 2.0, 20, "Multiplication", "Addition");
-        OptionEntry locationOff = new OptionEntry ("Off", 0.0, 0.0, "Addition","Addition");
+        OptionEntry locationOff = new OptionEntry ("Off", 0.0, 0.0, "Addition");
         options[0] = new Option ("Location", locationOn, locationOff);
         //init pictures
-        OptionEntry picturesOn = new OptionEntry("On", 2.0, 2.0, "Multiplication", "Multiplication");
-        OptionEntry picturesOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        OptionEntry picturesOn = new OptionEntry("On", 2.0, 2.0, "Multiplication");
+        OptionEntry picturesOff = new OptionEntry("Off", 0.0, 0.0, "Addition");
         options[1] = new Option("Pictures", picturesOn, picturesOff);
         //init camera
-        OptionEntry cameraOn = new OptionEntry("On", 1.5,1.1, "Multiplication", "Multiplication" );
-        OptionEntry cameraOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        OptionEntry cameraOn = new OptionEntry("On", 1.5,1.1, "Multiplication" );
+        OptionEntry cameraOff = new OptionEntry("Off", 0.0, 0.0, "Addition");
         options[2] = new Option("Camera", cameraOn, cameraOff);
         //init banners
-        OptionEntry bannerOn = new OptionEntry("On", 10.0, 5.0, "Addition", "Addition" );
-        OptionEntry bannerOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        OptionEntry bannerOn = new OptionEntry("On", 10.0, 5.0, "Addition");
+        OptionEntry bannerOff = new OptionEntry("Off", 0.0, 0.0, "Addition");
         options[3] = new Option("Banner", bannerOn,bannerOff);
         //init newsletters
-        OptionEntry newsLetterOn = new OptionEntry("On", 1.2, 1.0, "Multiplication","Multiplication");
-        OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        OptionEntry newsLetterOn = new OptionEntry("On", 1.2, 1.0, "Multiplication");
+        OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition");
         options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
-        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
-        OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
+        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication");
+        OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition");
         options[5] = new MaillingList("app2","Advertisements",advertisementsOn, advertisementsOff);
         //init the combo box
-        OptionEntry everyone = new OptionEntry("Everyone", 2.5, 2.0, "Multiplication" , "Multiplication");
-        OptionEntry onlyMe = new OptionEntry("Only Me", 0.0,0.0, "Addition", "Addition");
-        OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication","Multiplication" );
+        OptionEntry everyone = new OptionEntry("Everyone", 2.5, 2.0, "Multiplication");
+        OptionEntry onlyMe = new OptionEntry("Only Me", 0.0,0.0, "Addition");
+        OptionEntry friends = new OptionEntry("Friends", 1.1,1.75,"Multiplication");
         options[6] = new Option("posts",everyone,friends ,onlyMe);
         posts.addItem("Only Me");
         posts.addItem("Friends");

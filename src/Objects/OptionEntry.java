@@ -24,6 +24,13 @@ public class OptionEntry {
         this.uxOperation = uxOperation;
         this.privacyOperation = privacyOperation;
     }
+    public OptionEntry(String name, double uxFactor, double privacyFactor, String Operator) {
+        this.name = name;
+        this.uxFactor = uxFactor;
+        this.privacyFactor = privacyFactor;
+        this.uxOperation =  Operator;
+        this.privacyOperation = Operator;
+    }
     
     /*
     Calculates the new user experience score.

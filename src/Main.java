@@ -145,6 +145,7 @@ public class Main extends javax.swing.JFrame {
                 javax.swing.JFrame appFrame = (javax.swing.JFrame) appHash.get("JFrame");
                 appFrame.setVisible(true);
             }
+            
         }
     }//GEN-LAST:event_OpenAppActionPerformed
 

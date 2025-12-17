@@ -35,9 +35,9 @@ public class App1 extends javax.swing.JFrame {
         OptionEntry bannerOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[3] = new Option("Banner", bannerOn,bannerOff);
         //init newsletters
-        OptionEntry newsLetterOn = new OptionEntry("Adds On", 1.2, 1.0, "Multiplication","Multiplication");
+        OptionEntry newsLetterOn = new OptionEntry("On", 1.2, 1.0, "Multiplication","Multiplication");
         OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
-        options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
+        options[4] = new MaillingList("app1","NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
         OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");

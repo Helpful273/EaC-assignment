@@ -78,6 +78,18 @@ public class App {
         }
         return score;
     }
+    /*
+    Gets all of the Options and returns it into a array because jerry hashmap verys scary
+    */
+    public Option [] GetOption(){
+        Option [] Options = new Option [7];
+        int count = 0;
+        for (Option option: this.options.values()){
+            Options[count] = option;
+            count++;
+        }
+        return Options;
+    }
     @Override
     public String toString(){
         return name;

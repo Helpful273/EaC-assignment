@@ -39,7 +39,7 @@ public class App3 extends javax.swing.JFrame {
         OptionEntry newsLetterOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[4] = new Option("NewsLetter", newsLetterOn, newsLetterOff);
         //init advertisements
-        OptionEntry advertisementsOn = new OptionEntry("Adds On", 2.0, 1.0, "Multiplication","Multiplication");
+        OptionEntry advertisementsOn = new OptionEntry("On", 2.0, 1.0, "Multiplication","Multiplication");
         OptionEntry advertisementsOff = new OptionEntry("Off", 0.0, 0.0, "Addition","Addition");
         options[5] = new MaillingList("App3","Advertisements",advertisementsOn, advertisementsOff);
         //init the combo box
